@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    color: #202124;
+}
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #ddd;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #e63946;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 20px;
+    font-size: 14px;
+}
+
+.hero {
+    padding: 70px 6%;
+    background: #111827;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 12px;
+}
+
+.hero p {
+    color: #cbd5e1;
+    max-width: 550px;
+    line-height: 1.6;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 20px;
+    background: #e63946;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.products {
+    padding: 50px 6%;
+}
+
+.products h2 {
+    margin-bottom: 25px;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.product {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.product h3 {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    margin: 15px 0;
+}
+
+.buy {
+    display: block;
+    text-align: center;
+    padding: 10px;
+    background: #111827;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+footer {
+    margin-top: 40px;
+    padding: 25px;
+    text-align: center;
+    background: #111827;
+    color: #aaa;
+}
