@@ -85,6 +85,7 @@ button {
         );
 
     font-weight: 900;
+    font-size: 14px;
 }
 
 .logo strong {
@@ -108,7 +109,20 @@ button {
 
     border: 1px solid var(--border);
 
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s ease;
+}
+
+.menu-btn:hover {
+    background: var(--card2);
+}
+
+.menu-btn svg {
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -138,6 +152,7 @@ button {
     text-align: left;
 
     padding: 14px;
+    padding-left: 14px;
 
     border-radius: 12px;
 
@@ -145,10 +160,28 @@ button {
     color: white;
 
     font-size: 14px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    transition: all 0.2s ease;
+}
+
+.menu-panel button svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    color: var(--muted);
+    transition: color 0.2s ease;
 }
 
 .menu-panel button:hover {
     background: var(--card2);
+}
+
+.menu-panel button:hover svg {
+    color: var(--primary2);
 }
 
 
@@ -211,6 +244,12 @@ button {
 .primary {
     background: var(--primary);
     color: white;
+    transition: all 0.2s ease;
+}
+
+.primary:hover {
+    background: var(--primary2);
+    transform: translateY(-2px);
 }
 
 .secondary {
@@ -218,6 +257,12 @@ button {
     color: white;
 
     border: 1px solid var(--border);
+    transition: all 0.2s ease;
+}
+
+.secondary:hover {
+    background: var(--card);
+    border-color: var(--primary2);
 }
 
 
@@ -276,6 +321,11 @@ button {
     color: var(--green);
 }
 
+.status-icon svg {
+    width: 18px;
+    height: 18px;
+}
+
 
 /* SECTION */
 
@@ -310,6 +360,11 @@ button {
     color: var(--primary2);
 
     font-size: 12px;
+    transition: color 0.2s ease;
+}
+
+.section-title button:hover {
+    color: white;
 }
 
 
@@ -334,6 +389,13 @@ button {
     border-radius: 17px;
 
     background: var(--card);
+
+    transition: all 0.2s ease;
+}
+
+.product:hover {
+    border-color: var(--primary2);
+    background: rgba(124,92,255,.05);
 }
 
 .product-icon {
@@ -350,7 +412,12 @@ button {
 
     background: var(--card2);
 
-    font-size: 22px;
+    color: var(--primary2);
+}
+
+.product-icon svg {
+    width: 22px;
+    height: 22px;
 }
 
 .product-info {
@@ -396,6 +463,13 @@ button {
 
     font-size: 11px;
     font-weight: 800;
+
+    transition: all 0.2s ease;
+}
+
+.buy:hover {
+    background: var(--primary2);
+    transform: scale(1.05);
 }
 
 
@@ -415,20 +489,43 @@ button {
     border-radius: 15px;
 
     background: var(--card);
+
+    transition: all 0.2s ease;
+}
+
+.feature:hover {
+    border-color: var(--primary2);
+    background: rgba(124,92,255,.05);
 }
 
 .feature:last-child {
     grid-column: 1 / -1;
 }
 
-.feature span {
-    font-size: 22px;
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    background: rgba(124,92,255,.1);
+
+    color: var(--primary2);
+
+    margin-bottom: 10px;
+}
+
+.feature-icon svg {
+    width: 20px;
+    height: 20px;
 }
 
 .feature strong {
     display: block;
-
-    margin-top: 10px;
 
     font-size: 13px;
 }
@@ -468,7 +565,21 @@ button {
 
     border: 1px solid var(--border);
 
-    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+    background: var(--card2);
+    border-color: var(--primary2);
+}
+
+.back-btn svg {
+    width: 20px;
+    height: 20px;
 }
 
 
@@ -581,6 +692,12 @@ button {
     background: #25151a;
 
     color: #ff7183;
+
+    transition: all 0.2s ease;
+}
+
+.logout:hover {
+    background: #3a1f2a;
 }
 
 
@@ -623,19 +740,39 @@ button {
     color: var(--muted);
 
     font-size: 9px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    transition: all 0.2s ease;
 }
 
 .bottom-nav button span {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    margin-bottom: 3px;
+    width: 24px;
+    height: 24px;
 
     font-size: 16px;
+}
+
+.bottom-nav button span svg {
+    width: 20px;
+    height: 20px;
+    color: currentColor;
 }
 
 .bottom-nav button.active {
     background: rgba(124,92,255,.15);
 
+    color: var(--primary2);
+}
+
+.bottom-nav button:hover {
     color: var(--primary2);
 }
 
@@ -687,7 +824,20 @@ button {
     background: var(--card2);
     color: white;
 
-    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+    background: var(--primary);
+}
+
+.modal-close svg {
+    width: 20px;
+    height: 20px;
 }
 
 .modal-box h2 {
@@ -721,6 +871,12 @@ button {
 
     background: var(--card);
     color: white;
+
+    transition: all 0.2s ease;
+}
+
+.modal-form input:focus {
+    border-color: var(--primary);
 }
 
 .modal-form button {
@@ -734,6 +890,13 @@ button {
     color: white;
 
     font-weight: 800;
+
+    transition: all 0.2s ease;
+}
+
+.modal-form button:hover {
+    background: var(--primary2);
+    transform: translateY(-2px);
 }
 
 .hidden {
