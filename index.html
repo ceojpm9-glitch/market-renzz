@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Market Renzz</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">MR</div>
+        <div>
+          <h2>Market Renzz</h2>
+          <span>Toko Resmi</span>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a class="nav-item active" href="#dashboard"><span>⌂</span> Ringkasan</a>
+        <a class="nav-item" href="#apikey"><span>&lt;&gt;</span> Apikey Shop</a>
+        <a class="nav-item" href="#quota"><span>▣</span> Quota Shop</a>
+        <a class="nav-item" href="#ai"><span>✦</span> AI Renzz</a>
+        <a class="nav-item" href="#orders"><span>▤</span> Pesanan Saya</a>
+      </nav>
+
+      <div class="sidebar-note">
+        <strong>Market Renzz</strong><br>
+        Toko digital sederhana untuk kebutuhan kamu.
+      </div>
+    </aside>
+
+    <main class="content">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">Market Renzz</div>
+          <h1>Selamat datang</h1>
+          <p>Tempat beli apikey, quota add owner, dan ngobrol sama AI Renzz — semuanya langsung dari website ini.</p>
+        </div>
+
+        <div class="top-actions">
+          <button class="btn btn-dark" id="loginBtn">Masuk / Daftar</button>
+          <button class="btn btn-purple" id="adminBtn">Login Admin</button>
+        </div>
+      </header>
+
+      <section class="stats" id="dashboard">
+        <div class="stat-card">
+          <div class="stat-icon">◉</div>
+          <div class="stat-label">Unit apikey terjual</div>
+          <strong>0</strong>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">◉</div>
+          <div class="stat-label">Quota addowner aktif</div>
+          <strong>0</strong>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Status apikey shop</div>
+          <strong class="open"><i></i>Buka</strong>
+        </div>
+        <div class="stat-card">
+          <div class="stat-label">Status quota shop</div>
+          <strong class="open"><i></i>Buka</strong>
+        </div>
+      </section>
+
+      <section class="products">
+        <article class="product-card" id="apikey">
+          <h2>Apikey Shop</h2>
+          <p>Harga mulai <b>Rp5</b> per unit.</p>
+          <button class="buy-btn" data-product="Apikey">Beli apikey</button>
+        </article>
+
+        <article class="product-card" id="quota">
+          <h2>Quota Shop</h2>
+          <p>Quota addowner mulai <b>Rp2.000</b>.</p>
+          <button class="buy-btn" data-product="Quota">Beli quota</button>
+        </article>
+      </section>
+
+      <section class="wide-card" id="ai">
+        <h2>Ngobrol sama AI Renzz</h2>
+        <p>AI asisten situs, bisa dipakai siapa saja tanpa login.</p>
+        <button class="btn btn-dark" id="aiBtn">Buka AI Renzz</button>
+      </section>
+
+      <section class="wide-card orders-preview" id="orders">
+        <div>
+          <h2>Pesanan Saya</h2>
+          <p id="orderText">Belum ada pesanan.</p>
+        </div>
+        <button class="btn btn-dark" id="ordersBtn">Lihat pesanan</button>
+      </section>
+    </main>
+  </div>
+
+  <div class="modal hidden" id="modal">
+    <div class="modal-box">
+      <button class="close" id="closeModal">×</button>
+      <h3 id="modalTitle">Market Renzz</h3>
+      <p id="modalText">Fitur ini siap disambungkan ke backend nanti.</p>
+      <button class="buy-btn" id="modalOk">Oke</button>
+    </div>
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
