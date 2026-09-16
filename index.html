@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Market Renzz</title>
+    <title>MARKET RENZZ</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,178 +14,404 @@
 
 <div class="app">
 
-    <!-- HEADER -->
+    <!-- =========================
+         SIDEBAR / HEADER
+    ========================== -->
+
     <header class="header">
 
         <div class="logo">
-            <div class="logo-box">MR</div>
+
+            <div class="logo-box">
+                MR
+            </div>
 
             <div>
-                <strong>Market Renzz</strong>
+                <strong>MARKET RENZZ</strong>
                 <small>Toko Digital</small>
             </div>
+
         </div>
 
-        <button class="menu-btn" id="menuBtn">
+
+        <!-- MOBILE MENU BUTTON -->
+
+        <button
+            class="menu-btn"
+            id="menuBtn"
+            aria-label="Menu"
+        >
             ☰
         </button>
+
+
+        <!-- SIDEBAR MENU -->
+
+        <div
+            class="menu-panel hidden"
+            id="menuPanel"
+        >
+
+            <button data-section="home">
+                <span>⌂</span>
+                Ringkasan
+            </button>
+
+            <button data-section="shop">
+                <span>🔑</span>
+                Apikey Shop
+            </button>
+
+            <button data-section="shop">
+                <span>📦</span>
+                Quota Shop
+            </button>
+
+            <button data-section="ai">
+                <span>✦</span>
+                AI World
+            </button>
+
+            <button data-section="orders">
+                <span>🛍</span>
+                Pesanan Saya
+            </button>
+
+
+            <div class="sidebar-footer">
+
+                <div class="sidebar-line"></div>
+
+                <p>
+                    Situs berdiri sendiri,
+                    semua data dikelola dari
+                    website ini.
+                </p>
+
+            </div>
+
+        </div>
 
     </header>
 
 
-    <!-- MENU -->
-    <div class="menu-panel hidden" id="menuPanel">
+    <!-- =========================
+         HOME / DASHBOARD
+    ========================== -->
 
-        <button data-section="home">Beranda</button>
-        <button data-section="shop">Shop</button>
-        <button data-section="orders">Pesanan</button>
-        <button data-section="account">Akun</button>
+    <main
+        id="homeSection"
+        class="dashboard"
+    >
 
-    </div>
+        <!-- TOPBAR -->
+
+        <div class="topbar">
+
+            <div class="topbar-title">
+
+                <small>MARKET RENZZ</small>
+
+                <strong>Dashboard</strong>
+
+            </div>
 
 
-    <!-- HOME -->
-    <main id="homeSection">
+            <div class="topbar-actions">
+
+                <button
+                    class="login-outline"
+                    id="loginBtnDesktop"
+                >
+                    Masuk / Daftar
+                </button>
+
+                <button
+                    class="admin-btn"
+                    id="adminBtn"
+                >
+                    Login Admin
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- WELCOME -->
 
         <section class="hero">
 
-            <span class="badge">MARKET RENZZ</span>
+            <div class="welcome-label">
+                MARKET RENZZ
+            </div>
 
             <h1>
-                Semua kebutuhan digital
-                <span>di satu tempat.</span>
+                Selamat datang
             </h1>
 
             <p>
-                Beli apikey, quota dan layanan digital
-                dengan proses yang simpel.
+                Tempat beli apikey, quota add owner,
+                dan ngobrol sama AI World —
+                semuanya langsung dari website ini.
             </p>
 
-            <div class="hero-buttons">
-
-                <button class="btn primary" id="shopBtn">
-                    Mulai Belanja
-                </button>
-
-                <button class="btn secondary" id="loginBtn">
-                    Login
-                </button>
-
-            </div>
-
         </section>
 
 
-        <!-- STATUS -->
-        <section class="status-card">
+        <!-- =========================
+             STATISTICS
+        ========================== -->
 
-            <div>
-                <small>STATUS MARKET</small>
+        <section class="stats">
 
-                <h3>
-                    <span class="online"></span>
-                    Semua sistem normal
-                </h3>
-            </div>
+            <div class="stat-card">
 
-            <div class="status-badge">OK</div>
-
-        </section>
-
-
-        <!-- PRODUCT -->
-        <section class="section">
-
-            <div class="section-title">
-
-                <div>
-                    <small>PRODUK</small>
-                    <h2>Shop</h2>
+                <div class="stat-icon">
+                    🔑
                 </div>
 
-                <button id="allProductBtn">
-                    Lihat semua
-                </button>
+                <div class="stat-content">
+
+                    <small>
+                        UNIT APIKEY TERJUAL
+                    </small>
+
+                    <strong id="apikeySold">
+                        0
+                    </strong>
+
+                </div>
 
             </div>
 
 
-            <div class="products">
+            <div class="stat-card">
 
-                <article class="product">
+                <div class="stat-icon">
+                    📦
+                </div>
 
-                    <div class="product-icon">KEY</div>
+                <div class="stat-content">
 
-                    <div class="product-info">
+                    <small>
+                        KUOTA ADDOWNER AKTIF
+                    </small>
 
-                        <span>APIKEY</span>
+                    <strong id="quotaActive">
+                        0
+                    </strong>
 
-                        <h3>Apikey</h3>
+                </div>
 
-                        <p>
-                            Apikey untuk kebutuhan digital kamu.
-                        </p>
-
-                        <strong>
-                            Mulai Rp5
-                        </strong>
-
-                    </div>
-
-                    <button
-                        class="buy"
-                        data-product="apikey"
-                        data-price="5"
-                    >
-                        Beli
-                    </button>
-
-                </article>
+            </div>
 
 
-                <article class="product">
+            <div class="stat-card">
 
-                    <div class="product-icon">BOX</div>
+                <div class="stat-content">
 
-                    <div class="product-info">
+                    <small>
+                        STATUS APIKEY SHOP
+                    </small>
 
-                        <span>QUOTA</span>
+                    <strong class="status-open">
+                        <span class="online"></span>
+                        Buka
+                    </strong>
 
-                        <h3>Quota Add Owner</h3>
+                </div>
 
-                        <p>
-                            Tambahkan quota sesuai kebutuhan.
-                        </p>
+            </div>
 
-                        <strong>
-                            Mulai Rp2.000
-                        </strong>
 
-                    </div>
+            <div class="stat-card">
 
-                    <button
-                        class="buy"
-                        data-product="quota"
-                        data-price="2000"
-                    >
-                        Beli
-                    </button>
+                <div class="stat-content">
 
-                </article>
+                    <small>
+                        STATUS QUOTA SHOP
+                    </small>
+
+                    <strong class="status-open">
+                        <span class="online"></span>
+                        Buka
+                    </strong>
+
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- FEATURES -->
-        <section class="section">
+        <!-- =========================
+             SHOP DASHBOARD
+        ========================== -->
 
-            <div class="section-title">
+        <section class="shop-dashboard">
+
+
+            <!-- APIKEY -->
+
+            <article class="shop-card">
+
+                <div class="shop-card-top">
+
+                    <div class="shop-card-icon">
+                        🔑
+                    </div>
+
+                    <span class="available">
+                        ● Tersedia
+                    </span>
+
+                </div>
+
+
+                <small class="card-category">
+                    APIKEY SHOP
+                </small>
+
+
+                <h2>
+                    Apikey Shop
+                </h2>
+
+
+                <p>
+                    Apikey untuk kebutuhan digital kamu.
+                    Pilih jumlah sesuai kebutuhan.
+                </p>
+
+
+                <div class="shop-price">
+                    <span>Mulai dari</span>
+                    <strong>Rp5</strong>
+                </div>
+
+
+                <button
+                    class="buy"
+                    onclick="buyProduct('apikey', 5)"
+                >
+                    Beli apikey
+                </button>
+
+            </article>
+
+
+            <!-- QUOTA -->
+
+            <article class="shop-card">
+
+                <div class="shop-card-top">
+
+                    <div class="shop-card-icon">
+                        📦
+                    </div>
+
+                    <span class="available">
+                        ● Tersedia
+                    </span>
+
+                </div>
+
+
+                <small class="card-category">
+                    QUOTA SHOP
+                </small>
+
+
+                <h2>
+                    Quota Shop
+                </h2>
+
+
+                <p>
+                    Tambahkan quota add owner
+                    sesuai dengan kebutuhan kamu.
+                </p>
+
+
+                <div class="shop-price">
+                    <span>Mulai dari</span>
+                    <strong>Rp2.000</strong>
+                </div>
+
+
+                <button
+                    class="buy"
+                    onclick="buyProduct('quota', 2000)"
+                >
+                    Beli quota
+                </button>
+
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             AI WORLD
+        ========================== -->
+
+        <section
+            class="ai-dashboard"
+            id="aiWorldCard"
+        >
+
+            <div class="ai-icon">
+                ✦
+            </div>
+
+
+            <div class="ai-content">
+
+                <small>
+                    AI WORLD
+                </small>
+
+                <h2>
+                    Ngobrol sama AI World
+                </h2>
+
+                <p>
+                    AI asisten situs, bisa dipakai
+                    siapa saja tanpa login.
+                </p>
+
+            </div>
+
+
+            <button
+                class="ai-btn"
+                id="aiBtn"
+            >
+                Buka AI World
+            </button>
+
+        </section>
+
+
+        <!-- =========================
+             EXTRA INFO
+        ========================== -->
+
+        <section class="info-section">
+
+            <div class="section-heading">
 
                 <div>
-                    <small>FITUR</small>
-                    <h2>Layanan</h2>
+
+                    <small>
+                        INFORMASI
+                    </small>
+
+                    <h2>
+                        Kenapa MARKET RENZZ?
+                    </h2>
+
                 </div>
 
             </div>
@@ -193,18 +420,68 @@
             <div class="features">
 
                 <div class="feature">
-                    <strong>Proses Cepat</strong>
-                    <p>Pesanan diproses dengan cepat.</p>
+
+                    <div class="feature-icon">
+                        ⚡
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Proses Cepat
+                        </strong>
+
+                        <p>
+                            Pesanan diproses dengan
+                            cepat dan simpel.
+                        </p>
+
+                    </div>
+
                 </div>
 
-                <div class="feature">
-                    <strong>Aman</strong>
-                    <p>Data akun tersimpan secara aman.</p>
-                </div>
 
                 <div class="feature">
-                    <strong>AI Renzz</strong>
-                    <p>Asisten AI untuk membantu kamu.</p>
+
+                    <div class="feature-icon">
+                        🔒
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            Aman
+                        </strong>
+
+                        <p>
+                            Data akun dan pesanan
+                            dikelola melalui website.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="feature">
+
+                    <div class="feature-icon">
+                        ✦
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            AI World
+                        </strong>
+
+                        <p>
+                            Ngobrol dengan AI tanpa
+                            perlu login.
+                        </p>
+
+                    </div>
+
                 </div>
 
             </div>
@@ -214,82 +491,246 @@
     </main>
 
 
-    <!-- SHOP -->
-    <main id="shopSection" class="page hidden">
+    <!-- =========================
+         SHOP PAGE
+    ========================== -->
+
+    <main
+        id="shopSection"
+        class="page hidden"
+    >
 
         <div class="page-head">
 
-            <button class="back-btn" data-section="home">← Kembali</button>
+            <button
+                class="back-btn"
+                data-section="home"
+            >
+                ←
+            </button>
 
             <div>
-                <small>MARKET RENZZ</small>
-                <h2>Shop</h2>
+
+                <small>
+                    MARKET RENZZ
+                </small>
+
+                <h2>
+                    Shop
+                </h2>
+
             </div>
 
         </div>
 
-        <div id="shopProducts"></div>
+
+        <div
+            id="shopProducts"
+            class="shop-products"
+        ></div>
 
     </main>
 
 
-    <!-- ORDERS -->
-    <main id="ordersSection" class="page hidden">
+    <!-- =========================
+         ORDERS PAGE
+    ========================== -->
+
+    <main
+        id="ordersSection"
+        class="page hidden"
+    >
 
         <div class="page-head">
 
-            <button class="back-btn" data-section="home">← Kembali</button>
+            <button
+                class="back-btn"
+                data-section="home"
+            >
+                ←
+            </button>
 
             <div>
-                <small>MARKET RENZZ</small>
-                <h2>Pesanan Saya</h2>
+
+                <small>
+                    MARKET RENZZ
+                </small>
+
+                <h2>
+                    Pesanan Saya
+                </h2>
+
             </div>
 
         </div>
+
 
         <div id="ordersList"></div>
 
     </main>
 
 
-    <!-- ACCOUNT -->
-    <main id="accountSection" class="page hidden">
+    <!-- =========================
+         ACCOUNT PAGE
+    ========================== -->
+
+    <main
+        id="accountSection"
+        class="page hidden"
+    >
 
         <div class="page-head">
 
-            <button class="back-btn" data-section="home">← Kembali</button>
+            <button
+                class="back-btn"
+                data-section="home"
+            >
+                ←
+            </button>
 
             <div>
-                <small>ACCOUNT</small>
-                <h2>Akun</h2>
+
+                <small>
+                    ACCOUNT
+                </small>
+
+                <h2>
+                    Akun
+                </h2>
+
             </div>
 
         </div>
 
-        <div class="account-card" id="accountCard"></div>
+
+        <div
+            class="account-card"
+            id="accountCard"
+        ></div>
 
     </main>
 
 
-    <!-- BOTTOM NAV -->
+    <!-- =========================
+         AI PAGE
+    ========================== -->
+
+    <main
+        id="aiSection"
+        class="page hidden"
+    >
+
+        <div class="page-head">
+
+            <button
+                class="back-btn"
+                data-section="home"
+            >
+                ←
+            </button>
+
+            <div>
+
+                <small>
+                    MARKET RENZZ
+                </small>
+
+                <h2>
+                    AI World
+                </h2>
+
+            </div>
+
+        </div>
+
+
+        <div class="ai-page-card">
+
+            <div class="big-ai-icon">
+                ✦
+            </div>
+
+            <h2>
+                Ngobrol dengan AI World
+            </h2>
+
+            <p>
+                Asisten AI MARKET RENZZ siap
+                membantu kamu.
+            </p>
+
+            <button
+                class="ai-btn large"
+                onclick="openAIModal()"
+            >
+                Mulai ngobrol
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         MOBILE BOTTOM NAV
+    ========================== -->
+
     <nav class="bottom-nav">
 
-        <button class="active" data-section="home">Home</button>
-        <button data-section="shop">Shop</button>
-        <button data-section="orders">Pesanan</button>
-        <button data-section="account">Akun</button>
+        <button
+            class="active"
+            data-section="home"
+        >
+            <span>⌂</span>
+            Home
+        </button>
+
+
+        <button
+            data-section="shop"
+        >
+            <span>🔑</span>
+            Shop
+        </button>
+
+
+        <button
+            data-section="orders"
+        >
+            <span>🛍</span>
+            Pesanan
+        </button>
+
+
+        <button
+            data-section="account"
+        >
+            <span>●</span>
+            Akun
+        </button>
 
     </nav>
 
 </div>
 
 
-<!-- MODAL -->
-<div class="modal hidden" id="modal">
+<!-- =========================
+     MODAL
+========================== -->
+
+<div
+    class="modal hidden"
+    id="modal"
+>
 
     <div class="modal-box">
 
-        <button class="modal-close" id="modalClose">×</button>
+        <button
+            class="modal-close"
+            id="modalClose"
+        >
+            ×
+        </button>
 
         <div id="modalContent"></div>
 
