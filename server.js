@@ -339,7 +339,7 @@ function cryptoRandom() {
   return require('crypto').randomBytes(10).toString('hex').toUpperCase();
 }
 
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+app.get('/{*splat}', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 
 if (require.main === module) {
   app.listen(PORT, () => console.log(`Market Renzz aktif di port ${PORT}`));
