@@ -156,7 +156,8 @@ window.handleLogin = async () => {
         renderOrders();
         showSection('account');
     } catch (error) {
-        showAuthMessage('Server tidak dapat dihubungi.');
+        console.error('Login error:', error);
+        showAuthMessage('Server tidak dapat dihubungi. Coba lagi setelah deployment selesai.');
     }
 };
 
@@ -189,7 +190,8 @@ window.handleRegister = async () => {
         renderAccount();
         showSection('account');
     } catch (error) {
-        showAuthMessage('Server tidak dapat dihubungi.');
+        console.error('Register error:', error);
+        showAuthMessage('Server tidak dapat dihubungi. Coba lagi setelah deployment selesai.');
     }
 };
 
